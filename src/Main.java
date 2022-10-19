@@ -5,15 +5,15 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedHashMap<Integer, String[]> linkedHashMap = new LinkedHashMap<>();
-        linkedHashMap.put(1, new String[]{"aaa"});
+        LinkedHashMap<Integer, String[]> lMap = new LinkedHashMap<>();
+        lMap.put(1, new String[]{"aaa"});
         //String sss = linkedHashMap.toString();
-        linkedHashMap.put(2, new String[]{"bbbbb"});
-        linkedHashMap.put(2, new String[]{"ccccccc"});
+        lMap.put(2, new String[]{"bbbbb"});
+        lMap.put(2, new String[]{"ccccccc"});
 
-        String[] qqq = linkedHashMap.get(2);
+        String[] qqq = lMap.get(2);
 
-        linkedHashMap.merge(2, new String[]{"ddd"}
+        lMap.merge(2, new String[]{"ddd"}
                 , (a, b) -> Stream.concat(Arrays.stream(a), Arrays.stream(b)).toArray(size -> new String[size])
         );
 
@@ -23,6 +23,8 @@ public class Main {
 ////        EnumMap;
 //        ConcurrentHashMap;
 //        ConcurrentLinkedHashMap;
+
+        int q = 1;
 
     }
 }
